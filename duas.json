@@ -1,0 +1,95 @@
+{
+  "categories": [
+    { "id": "faraj", "title": "Dua-e-Faraj", "items": [
+      { "id": "faraj-short", "title": "Dua-e-Faraj (short, well-known form)", "status": "verified",
+        "arabic": "اللَّهُمَّ كُنْ لِوَلِيِّكَ الْحُجَّةِ بْنِ الْحَسَنِ صَلَوَاتُكَ عَلَيْهِ وَعَلَى آبَائِهِ فِي هَذِهِ السَّاعَةِ وَفِي كُلِّ سَاعَةٍ وَلِيًّا وَحَافِظًا وَقَائِدًا وَنَاصِرًا وَدَلِيلًا وَعَيْنًا حَتَّى تُسْكِنَهُ أَرْضَكَ طَوْعًا وَتُمَتِّعَهُ فِيهَا طَوِيلًا",
+        "urdu": "اے اللہ! اپنے ولی، حجت بن حسن (عج) کے لیے — جن پر تیری رحمتیں ہوں اور ان کے آباء پر — اس گھڑی میں اور ہر گھڑی میں ولی، حافظ، قائد، ناصر، دلیل اور نگہبان ہو جا، یہاں تک کہ تو انہیں اپنی زمین پر اطمینان سے بسا دے اور انہیں اس میں طویل عرصہ تک بہرہ مند فرما",
+        "transliteration": "Allahumma kun li waliyyikal Hujjati bnil Hasani salawatuka alayhi wa ala abaa'ihi fi hadhihis sa'ati wa fi kulli sa'atin waliyyan wa hafizan wa qa'idan wa nasiran wa daleelan wa aynan hatta tuskinahu ardaka taw'an wa tumatti'ahu feeha taweela",
+        "source": "Widely recorded in Shia supplication literature (e.g. Mafatih al-Jinan); recited especially after prayers for the reappearance of Imam al-Mahdi (a.j.)."
+      }
+    ]},
+    { "id": "ahad", "title": "Dua-e-Ahad", "items": [
+      { "id": "ahad-full", "title": "Dua-e-Ahad (full text)", "status": "pending" }
+    ]},
+    { "id": "tawassul", "title": "Dua-e-Tawassul", "items": [
+      { "id": "tawassul-full", "title": "Dua-e-Tawassul (full text)", "status": "pending" }
+    ]},
+    { "id": "kumayl", "title": "Dua-e-Kumayl", "items": [
+      { "id": "kumayl-full", "title": "Dua-e-Kumayl (full text)", "status": "pending" }
+    ]},
+    { "id": "nudbah", "title": "Dua-e-Nudbah", "items": [
+      { "id": "nudbah-full", "title": "Dua-e-Nudbah (full text)", "status": "pending" }
+    ]},
+    { "id": "sabah", "title": "Dua-e-Sabah", "items": [
+      { "id": "sabah-full", "title": "Dua-e-Sabah (full text)", "status": "pending" }
+    ]},
+    { "id": "jawshan-saghir", "title": "Dua-e-Jawshan Saghir", "items": [
+      { "id": "jawshan-saghir-full", "title": "Dua-e-Jawshan Saghir (full text)", "status": "pending" }
+    ]},
+    { "id": "jawshan-kabir", "title": "Dua-e-Jawshan Kabir", "items": [
+      { "id": "jawshan-kabir-full", "title": "Dua-e-Jawshan Kabir (100 fuqrahs)", "status": "pending" }
+    ]},
+    { "id": "mashlool", "title": "Dua-e-Mashlool", "items": [
+      { "id": "mashlool-full", "title": "Dua-e-Mashlool (full text)", "status": "pending" }
+    ]},
+    { "id": "iftitah", "title": "Dua-e-Iftitah", "items": [
+      { "id": "iftitah-full", "title": "Dua-e-Iftitah (full text, Ramadan nights)", "status": "pending" }
+    ]},
+    { "id": "abu-hamza", "title": "Dua-e-Abu Hamza Thumali", "items": [
+      { "id": "abu-hamza-full", "title": "Dua-e-Abu Hamza Thumali (full text, Sahar in Ramadan)", "status": "pending" }
+    ]},
+    { "id": "rizq", "title": "Dua-e-Rizq", "items": [
+      { "id": "rizq-full", "title": "Dua for Sustenance", "status": "pending" }
+    ]},
+    { "id": "forgiveness", "title": "Dua for Forgiveness", "items": [
+      { "id": "istighfar-common", "title": "Common Istighfar", "status": "verified",
+        "arabic": "أَسْتَغْفِرُ اللَّهَ رَبِّي وَأَتُوبُ إِلَيْهِ",
+        "urdu": "میں اپنے رب اللہ سے بخشش مانگتا ہوں اور اسی کی طرف توبہ کرتا ہوں",
+        "transliteration": "Astaghfirullaha Rabbi wa atubu ilayh",
+        "source": "Widely recited general Istighfar formula."
+      },
+      { "id": "forgiveness-full", "title": "Extended Dua for Forgiveness", "status": "pending" }
+    ]},
+    { "id": "parents", "title": "Dua for Parents", "items": [
+      { "id": "parents-quranic", "title": "Qur'anic Dua for Parents", "status": "verified",
+        "arabic": "رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+        "urdu": "اے میرے رب! ان دونوں پر رحم فرما جیسے انہوں نے بچپن میں میری پرورش کی",
+        "transliteration": "Rabbir hamhuma kama rabbayani sagheera",
+        "source": "Qur'an 17:24"
+      }
+    ]},
+    { "id": "health", "title": "Dua for Health", "items": [
+      { "id": "health-full", "title": "Dua for Health & Healing", "status": "pending" }
+    ]},
+    { "id": "protection", "title": "Dua for Protection", "items": [
+      { "id": "protection-full", "title": "Dua for Protection", "status": "pending" }
+    ]},
+    { "id": "knowledge", "title": "Dua for Knowledge", "items": [
+      { "id": "knowledge-quranic", "title": "Qur'anic Dua for Knowledge", "status": "verified",
+        "arabic": "رَبِّ زِدْنِي عِلْمًا",
+        "urdu": "اے میرے رب! میرا علم زیادہ فرما",
+        "transliteration": "Rabbi zidni 'ilma",
+        "source": "Qur'an 20:114"
+      }
+    ]},
+    { "id": "difficulties", "title": "Dua for Difficulties", "items": [
+      { "id": "difficulties-full", "title": "Dua in Times of Difficulty", "status": "pending" }
+    ]},
+    { "id": "imam-mahdi", "title": "Dua for Imam Mahdi (a.j.)", "items": [
+      { "id": "mahdi-full", "title": "Extended Dua for Imam Mahdi (a.j.)", "status": "pending" }
+    ]},
+    { "id": "daily", "title": "Daily Duas", "items": [
+      { "id": "daily-full", "title": "Collection of Daily Duas", "status": "pending" }
+    ]}
+  ],
+  "weekly": [
+    { "id": "shab-e-jummah", "title": "Eve of Friday (Shab-e-Jummah)", "status": "pending" },
+    { "id": "friday", "title": "Friday", "status": "pending" },
+    { "id": "saturday", "title": "Saturday", "status": "pending" },
+    { "id": "sunday", "title": "Sunday", "status": "pending" },
+    { "id": "monday", "title": "Monday", "status": "pending" },
+    { "id": "tuesday", "title": "Tuesday", "status": "pending" },
+    { "id": "wednesday", "title": "Wednesday", "status": "pending" },
+    { "id": "thursday", "title": "Thursday", "status": "pending" }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "id": "munaajaat-ali", "title": "Munaajaat of Imam Ali (a.s.)", "status": "pending" },
+    { "id": "munaajaat-khamsa-ashar", "title": "The Fifteen Whispered Prayers (Munajat al-Khamsa 'Ashar) — Imam Zain-ul-Abideen (a.s.)", "status": "pending" },
+    { "id": "munaajaat-other", "title": "Other Ahlul Bayt (a.s.) Munaajaat", "status": "pending" }
+  ],
+  "note": "Each Munaajaat page will include Arabic, Urdu translation, attribution and source once verified text is added."
+}

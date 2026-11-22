@@ -1,0 +1,144 @@
+{
+  "overview": {
+    "title": "Daily Obligatory Prayers (Namaz)",
+    "prayers": [
+      { "name": "Fajr", "rakats": 2, "timing": "From dawn (Fajr) until sunrise" },
+      { "name": "Dhuhr", "rakats": 4, "timing": "From midday until Asr" },
+      { "name": "Asr", "rakats": 4, "timing": "After Dhuhr until sunset" },
+      { "name": "Maghrib", "rakats": 3, "timing": "After sunset (angle-based) until Isha" },
+      { "name": "Isha", "rakats": 4, "timing": "After Maghrib until midnight" }
+    ],
+    "notes": "Exact start/end times depend on your location and chosen calculation method — see the Prayer Time tool. Rulings on combining Dhuhr/Asr and Maghrib/Isha, and other details, can vary by Marja; consult your Marja's risala (Tawzih al-Masail) for specifics."
+  },
+  "conditions": [
+    "Purity of body and clothing (Taharah)",
+    "Wudu (or Ghusl/Tayammum where applicable)",
+    "Facing the Qibla",
+    "Correct timing of the prayer",
+    "Permissible place of prayer (not usurped land)",
+    "Appropriate covering (Satr al-Awrah)"
+  ],
+  "steps": [
+    {
+      "id": "niyyat",
+      "title": "Niyyat (Intention)",
+      "instruction_ur": "دل میں نماز کی نیت کریں — کون سی نماز، کتنی رکعت، قربتاً الی اللہ۔ زبان سے الفاظ کہنا واجب نہیں۔",
+      "note": "Niyyat is an intention of the heart — there is no fixed Arabic wording required to be spoken aloud."
+    },
+    {
+      "id": "takbiratul-ihram",
+      "title": "Takbiratul Ihram",
+      "arabic": "اَللهُ اَكْبَرُ",
+      "urdu": "اللہ سب سے بڑا ہے",
+      "transliteration": "Allahu Akbar"
+    },
+    {
+      "id": "qiyam",
+      "title": "Qiyam (Standing)",
+      "instruction_ur": "سیدھے کھڑے ہو کر، ہاتھ رانوں پر رکھ کر (بعض مراجع کے نزدیک باندھنا جائز نہیں)، قبلہ رخ۔",
+      "note": "Stand upright, facing the Qibla. (Folding the arms during standing is treated differently in Shia fiqh than in some other schools — consult your Marja.)"
+    },
+    {
+      "id": "surah-fatiha",
+      "title": "Surah Al-Fatiha (recited every rak'at)",
+      "ref": "quran:1"
+    },
+    {
+      "id": "second-surah",
+      "title": "A Second Surah (first two rak'ats only)",
+      "instruction_ur": "پہلی اور دوسری رکعت میں سورہ فاتحہ کے بعد کوئی اور مکمل سورہ پڑھیں — عام طور پر سورہ اخلاص یا دیگر مختصر سورہ۔",
+      "note": "Commonly Surah Al-Ikhlas or another short surah; see Quran section."
+    },
+    {
+      "id": "ruku",
+      "title": "Ruku (Bowing)",
+      "instruction_ur": "کمر کو جھکا کر ہاتھ گھٹنوں پر رکھیں۔",
+      "dhikr": {
+        "arabic": "سُبْحَانَ رَبِّيَ الْعَظِيمِ وَبِحَمْدِهِ",
+        "urdu": "پاک ہے میرا رب جو عظمت والا ہے اور اسی کی حمد کے ساتھ",
+        "transliteration": "Subhana Rabbiyal 'Azeemi wa bihamdih",
+        "repeat": "Recited once (three times is Mustahab/recommended)"
+      }
+    },
+    {
+      "id": "sajdah-1",
+      "title": "First Sajdah (Prostration)",
+      "instruction_ur": "سات اعضاء (پیشانی، دونوں ہتھیلیاں، دونوں گھٹنے، دونوں انگوٹھے) زمین پر — پیشانی مٹی یا قدرتی چیز پر جس پر سجدہ صحیح ہو۔",
+      "dhikr": {
+        "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى وَبِحَمْدِهِ",
+        "urdu": "پاک ہے میرا رب جو بلند و بالا ہے اور اسی کی حمد کے ساتھ",
+        "transliteration": "Subhana Rabbiyal A'la wa bihamdih",
+        "repeat": "Recited once (three times is Mustahab/recommended)"
+      },
+      "note": "Shia fiqh requires the forehead to rest on earth, stone, or something of plant origin (not edible or wearable) that is suitable for Sajdah (e.g. a Turbah/Mohr)."
+    },
+    {
+      "id": "jalsa",
+      "title": "Sitting between the two Sajdahs (Jalsa)",
+      "instruction_ur": "دونوں سجدوں کے درمیان مختصر طور پر بیٹھیں۔"
+    },
+    {
+      "id": "sajdah-2",
+      "title": "Second Sajdah",
+      "note": "Same as the first Sajdah."
+    },
+    {
+      "id": "second-rakat",
+      "title": "Second Rak'at",
+      "instruction_ur": "دوسری رکعت پہلی کی طرح ہے — سورہ فاتحہ، دوسری سورہ، رکوع، دو سجدے۔"
+    },
+    {
+      "id": "qunoot",
+      "title": "Qunoot (before the Ruku of the 2nd rak'at)",
+      "instruction_ur": "دوسری رکعت کے رکوع سے پہلے دونوں ہاتھ چہرے کے سامنے بلند کر کے دعا کی جاتی ہے — مستحب ہے۔",
+      "common_recitation": {
+        "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+        "urdu": "اے ہمارے رب! ہمیں دنیا میں بھلائی دے اور آخرت میں بھی بھلائی دے اور ہمیں آگ کے عذاب سے بچا",
+        "transliteration": "Rabbana atina fid-dunya hasanatan wa fil akhirati hasanatan wa qina 'adhaban-nar",
+        "source": "Qur'an 2:201 — one of several supplications commonly recited in Qunoot; any dua may be recited."
+      },
+      "note": "Qunoot is Mustahab (recommended), not Wajib (obligatory). Any supplication, in Arabic or one's own language, may be recited."
+    },
+    {
+      "id": "tashahhud",
+      "title": "Tashahhud (after 2nd rak'at, and at the end of prayer)",
+      "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ",
+      "urdu": "میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اور میں گواہی دیتا ہوں کہ محمد (ص) اس کے بندے اور رسول ہیں۔ اے اللہ محمد اور آلِ محمد پر درود بھیج",
+      "transliteration": "Ash-hadu an la ilaha illallahu wahdahu la sharika lah, wa ash-hadu anna Muhammadan 'abduhu wa rasuluh, Allahumma salli 'ala Muhammadin wa aali Muhammad"
+    },
+    {
+      "id": "salam",
+      "title": "Salam (concludes the prayer)",
+      "arabic": "اَلسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، اَلسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ",
+      "urdu": "اے نبی! آپ پر سلام ہو اور اللہ کی رحمت اور برکتیں۔ ہم پر اور اللہ کے نیک بندوں پر سلام ہو۔ تم پر سلام ہو اور اللہ کی رحمت اور برکتیں",
+      "transliteration": "Assalamu 'alayka ayyuhan-Nabiyyu wa rahmatullahi wa barakatuh, Assalamu 'alayna wa 'ala 'ibadillahis-salihin, Assalamu 'alaykum wa rahmatullahi wa barakatuh"
+    },
+    {
+      "id": "rakat-structure",
+      "title": "Three- and Four-Rak'at Prayers",
+      "instruction_ur": "تیسری اور چوتھی رکعت میں صرف سورہ فاتحہ (یا تین بار تسبیحاتِ اربعہ) پڑھی جاتی ہے، دوسری سورہ نہیں۔ تسبیحاتِ اربعہ: سُبْحَانَ اللّٰهِ وَالْحَمْدُ لِلّٰهِ وَلَا إِلَٰهَ إِلَّا اللّٰهُ وَاللّٰهُ أَكْبَرُ",
+      "tasbihat_arbaa": {
+        "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ",
+        "urdu": "پاک ہے اللہ، اور تمام تعریفیں اللہ کے لیے ہیں، اور اللہ کے سوا کوئی معبود نہیں، اور اللہ سب سے بڑا ہے",
+        "transliteration": "Subhanallahi wal-hamdu lillahi wa la ilaha illallahu wallahu akbar",
+        "note": "Recited three times in the 3rd/4th rak'at in place of a second Fatiha recitation (Wajib takhyiri — a choice)."
+      }
+    }
+  ],
+  "wudu_summary": {
+    "title": "Wudu (Ablution) — Summary",
+    "steps_ur": [
+      "نیت کریں",
+      "چہرہ دھوئیں (پیشانی کے بال سے ٹھوڑی تک، اور جتنا چوڑائی میں عام طور پر انگوٹھے اور درمیانی انگلی کے درمیان آئے)",
+      "دایاں ہاتھ کہنی سے انگلیوں تک دھوئیں",
+      "بایاں ہاتھ کہنی سے انگلیوں تک دھوئیں",
+      "سر کے اگلے حصے پر ہاتھ کی تری سے مسح کریں",
+      "دائیں اور بائیں پاؤں پر انگلیوں سے ٹخنے تک مسح کریں"
+    ],
+    "note": "Rulings on exact boundaries, order (tartib) and continuity (muwalat) should be confirmed from your Marja's risala."
+  },
+  "tayammum_summary": {
+    "title": "Tayammum — Summary",
+    "note": "Performed with clean earth/sand/stone when water is unavailable, harmful, or insufficient. Involves striking both palms on the ground, wiping the forehead, then wiping the backs of both hands. Full method and conditions vary slightly by Marja — consult your Marja's risala."
+  }
+}

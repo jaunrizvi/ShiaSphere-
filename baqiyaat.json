@@ -1,0 +1,19 @@
+{
+  "items": [
+    { "id": "salawat", "title": "Salawat", "status": "verified",
+      "arabic": "اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ",
+      "urdu": "اے اللہ! محمد اور آلِ محمد پر درود بھیج",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa aali Muhammad",
+      "source": "Universally recited salutation upon the Prophet (s.a.w.) and his Ahlul Bayt (a.s.)."
+    },
+    { "id": "istighfar", "title": "Istighfar", "status": "verified",
+      "arabic": "أَسْتَغْفِرُ اللَّهَ رَبِّي وَأَتُوبُ إِلَيْهِ",
+      "urdu": "میں اپنے رب اللہ سے بخشش مانگتا ہوں اور اسی کی طرف توبہ کرتا ہوں",
+      "transliteration": "Astaghfirullaha Rabbi wa atubu ilayh"
+    },
+    { "id": "recommended-prayers", "title": "Recommended Prayers (Nawafil)", "status": "pending" },
+    { "id": "recommended-recitations", "title": "Other Recommended Recitations", "status": "pending" },
+    { "id": "charity-guidance", "title": "Charity-Related Religious Guidance", "status": "pending" },
+    { "id": "recommended-worship", "title": "Recommended Worship", "status": "pending" }
+  ]
+}

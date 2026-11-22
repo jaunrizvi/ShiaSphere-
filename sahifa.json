@@ -1,0 +1,8 @@
+{
+  "collections": [
+    { "id": "sahifa-sajjadiyah", "title": "Sahifa-e-Sajjadiyah", "subtitle": "Supplications attributed to Imam Zain-ul-Abideen (a.s.)", "status": "pending" },
+    { "id": "sahifa-fatemiyah", "title": "Sahifa-e-Fatemiyah", "subtitle": "Material attributed to Bibi Fatima Zahra (s.a.), with clear source identification", "status": "pending" },
+    { "id": "sahifa-mahdiyah", "title": "Sahifa-e-Mahdiyah", "subtitle": "Verified supplications and related material", "status": "pending" }
+  ],
+  "note": "Full numbered texts with Arabic, Urdu translation and references will be added progressively."
+}

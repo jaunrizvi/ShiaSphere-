@@ -1,0 +1,37 @@
+{
+  "daily": [
+    { "id": "morning-aamaal", "title": "Morning Aamaal", "status": "pending" },
+    { "id": "evening-aamaal", "title": "Evening Aamaal", "status": "pending" },
+    { "id": "after-prayer-aamaal", "title": "After-Prayer Aamaal", "status": "verified",
+      "note": "Tasbih of Hazrat Fatima Zahra (s.a.): Allahu Akbar x34, Alhamdulillah x33, SubhanAllah x33 — recited after every obligatory prayer.",
+      "arabic_sample": "اَللّٰهُ أَكْبَرُ (٣٤) اَلْحَمْدُ لِلّٰهِ (٣٣) سُبْحَانَ اللّٰهِ (٣٣)",
+      "urdu": "اللہ سب سے بڑا ہے (34 بار)، تمام تعریفیں اللہ کے لیے ہیں (33 بار)، اللہ پاک ہے (33 بار)",
+      "source": "Widely narrated practice known as Tasbih al-Zahra; counts are well established in Shia practice."
+    }
+  ],
+  "weekly": [
+    { "id": "thursday", "title": "Thursday", "status": "pending" },
+    { "id": "shab-e-jummah", "title": "Shab-e-Jummah", "status": "pending" },
+    { "id": "friday", "title": "Friday", "status": "pending" }
+  ],
+  "monthly": [
+    { "id": "first-of-month", "title": "First day of Hijri month", "status": "pending" },
+    { "id": "ayyam-al-bidh", "title": "Ayyam al-Bidh (13th, 14th, 15th)", "status": "pending" }
+  ],
+  "special_occasions": [
+    { "id": "muharram", "title": "Muharram", "status": "pending" },
+    { "id": "ashura", "title": "Ashura", "status": "pending" },
+    { "id": "arbaeen", "title": "Arbaeen", "status": "pending" },
+    { "id": "safar", "title": "Safar", "status": "pending" },
+    { "id": "rabi-awwal", "title": "Rabi al-Awwal", "status": "pending" },
+    { "id": "rabi-thani", "title": "Rabi al-Thani", "status": "pending" },
+    { "id": "jumada-ula", "title": "Jumada al-Ula", "status": "pending" },
+    { "id": "jumada-thani", "title": "Jumada al-Thani", "status": "pending" },
+    { "id": "rajab", "title": "Rajab", "status": "pending" },
+    { "id": "shaban", "title": "Sha'ban", "status": "pending" },
+    { "id": "ramadan", "title": "Ramadan", "status": "pending" },
+    { "id": "eid-fitr", "title": "Eid al-Fitr", "status": "pending" },
+    { "id": "eid-adha", "title": "Eid al-Adha", "status": "pending" },
+    { "id": "eid-ghadir", "title": "Eid al-Ghadir", "status": "pending" }
+  ]
+}
