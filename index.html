@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ShiaSphere — Complete Shia Islamic Companion</title>
+<meta name="description" content="ShiaSphere: daily prayers, Quran, Duas, Ziyarat, Aamaal, Islamic calendar, Qibla and Tasbeeh — a complete Shia Islamic companion.">
+<meta name="theme-color" content="#3E2723">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/images/logo.png">
+
+<!-- Fonts: Arabic + Urdu + UI (Google Fonts, loaded with swap + system fallback in CSS) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/golden-theme.css">
+<link rel="stylesheet" href="css/silver-theme.css">
+<link rel="stylesheet" href="css/arabic.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="app-header">
+    <div class="app-header__top">
+      <div class="app-header__brand">
+        <svg class="app-header__logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+          <path d="M24 6 L27 18 L39 18 L29 25 L33 37 L24 29 L15 37 L19 25 L9 18 L21 18 Z" fill="currentColor" opacity="0.9"/>
+        </svg>
+        <div>
+          <p class="app-header__title">ShiaSphere</p>
+          <p class="app-header__subtitle" id="header-subtitle">Your Shia Islamic Companion</p>
+        </div>
+      </div>
+      <div class="app-header__actions">
+        <button class="icon-btn" id="btn-settings" aria-label="Settings" title="Settings">⚙</button>
+      </div>
+    </div>
+    <div class="ornament-divider"></div>
+    <div class="search-bar">
+      <span class="search-bar__icon">🔍</span>
+      <input type="text" id="global-search" placeholder="Search Duas, Ziyarat, Quran, Aamaal…" autocomplete="off">
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="app-main" id="app-main">
+
+    <!-- ---------- SEARCH RESULTS OVERLAY PAGE ---------- -->
+    <section class="page" id="page-search-results">
+      <h2 class="section-title">Search Results</h2>
+      <div id="search-results-list"></div>
+    </section>
+
+    <!-- ---------- HOME ---------- -->
+    <section class="page is-active" id="page-home">
+      <div class="card card--ornate">
+        <p id="home-greeting" style="font-weight:700;font-size:1.05rem;margin:0 0 4px;">Assalamu Alaikum</p>
+        <div class="card-row">
+          <div>
+            <div id="home-gregorian" style="font-size:0.85rem;color:var(--color-text-secondary);"></div>
+            <div id="home-hijri" style="font-size:0.85rem;color:var(--color-text-secondary);"></div>
+          </div>
+          <div style="text-align:right;">
+            <div class="chip" id="home-event-chip" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="home-next-prayer-card">
+        <div class="card-row">
+          <div>
+            <div style="font-size:0.72rem;color:var(--color-text-secondary);">Next Prayer</div>
+            <div id="home-next-prayer-name" style="font-size:1.3rem;font-weight:700;color:var(--color-accent);">—</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:0.72rem;color:var(--color-text-secondary);">Countdown</div>
+            <div id="home-next-prayer-countdown" style="font-size:1.1rem;font-weight:700;">—:—:—</div>
+          </div>
+        </div>
+        <div class="grid-3" style="margin-top:12px;" id="home-prayer-overview"></div>
+      </div>
+
+      <div class="quick-grid">
+        <div class="quick-grid__item" data-nav="tasbeeh"><span class="emoji">📿</span>Tasbeeh</div>
+        <div class="quick-grid__item" data-nav="quran"><span class="emoji">📖</span>Quran</div>
+        <div class="quick-grid__item" data-nav="rakatay"><span class="emoji">🕌</span>Namaz</div>
+        <div class="quick-grid__item" data-nav="ziyarat"><span class="emoji">🕋</span>Ziyarat</div>
+        <div class="quick-grid__item" data-nav="aamaal"><span class="emoji">📜</span>Aamaal</div>
+        <div class="quick-grid__item" data-nav="munaajaat"><span class="emoji">🤲</span>Munaajaat</div>
+        <div class="quick-grid__item" data-nav="sahifa"><span class="emoji">📘</span>Sahifa</div>
+        <div class="quick-grid__item" data-nav="calendar"><span class="emoji">📅</span>Calendar</div>
+      </div>
+
+      <h3 class="section-title">Quick Tasbeeh</h3>
+      <div class="card" style="text-align:center;">
+        <div class="tasbeeh-zikr" id="home-tasbeeh-zikr">سُبْحَانَ اللّٰه</div>
+        <div class="tasbeeh-count" id="home-tasbeeh-count" style="font-size:2.6rem;">0</div>
+        <div class="btn-row" style="justify-content:center;margin-top:8px;">
+          <button class="btn btn--primary" id="home-tasbeeh-tap">Tap (+1)</button>
+          <button class="btn" data-nav="tasbeeh">Open Full Tool</button>
+        </div>
+      </div>
+
+      <h3 class="section-title">Dua of the Day</h3>
+      <div class="card">
+        <div class="reader__arabic" id="home-daily-dua-arabic" style="font-size:1.2rem;line-height:2.1;"></div>
+        <div class="reader__urdu" id="home-daily-dua-urdu" style="font-size:0.95rem;"></div>
+        <div class="reader__meta" id="home-daily-dua-source"></div>
+      </div>
+    </section>
+
+    <!-- ---------- TASBEEH ---------- -->
+    <section class="page" id="page-tasbeeh">
+      <h2 class="section-title">Digital Tasbeeh</h2>
+      <div class="card">
+        <div class="card-row">
+          <select id="tasbeeh-preset" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--color-border);background:var(--color-surface);color:var(--color-text-primary);"></select>
+          <button class="btn" id="tasbeeh-add-custom">+ Custom</button>
+        </div>
+      </div>
+      <div class="card tasbeeh-counter">
+        <div class="tasbeeh-zikr" id="tasbeeh-zikr-display">سُبْحَانَ اللّٰه</div>
+        <div class="tasbeeh-count" id="tasbeeh-count-display">0</div>
+        <div class="progress-bar"><div class="progress-bar__fill" id="tasbeeh-progress-fill"></div></div>
+        <div id="tasbeeh-target-label" style="font-size:0.78rem;color:var(--color-text-secondary);">Target: 33</div>
+        <div class="tasbeeh-tap-zone" id="tasbeeh-tap-zone">
+          <span style="font-size:0.85rem;color:var(--color-text-secondary);">Tap to Count</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn" id="tasbeeh-undo">⟲ Undo</button>
+          <button class="btn btn--danger" id="tasbeeh-reset">Reset</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="settings-row">
+          <span class="settings-row__label">Haptic Feedback</span>
+          <label class="switch"><input type="checkbox" id="tasbeeh-haptic-toggle"><span class="switch-slider"></span></label>
+        </div>
+        <div class="settings-row">
+          <span class="settings-row__label">Sound</span>
+          <label class="switch"><input type="checkbox" id="tasbeeh-sound-toggle"><span class="switch-slider"></span></label>
+        </div>
+        <div class="settings-row">
+          <span class="settings-row__label">Set Target</span>
+          <input type="number" id="tasbeeh-target-input" value="33" min="1" style="width:70px;padding:6px;border-radius:8px;border:1px solid var(--color-border);">
+        </div>
+      </div>
+      <h3 class="section-title">Saved Sessions</h3>
+      <div class="card" id="tasbeeh-sessions-list"><div class="empty-state">No saved sessions yet.</div></div>
+    </section>
+
+    <!-- ---------- RAKATAY (NAMAZ) ---------- -->
+    <section class="page" id="page-rakatay">
+      <h2 class="section-title">Rakatay — Namaz Guide</h2>
+      <div class="card">
+        <div class="settings-row">
+          <span class="settings-row__label">Reference Marja</span>
+          <select id="marja-select" style="padding:6px;border-radius:8px;border:1px solid var(--color-border);background:var(--color-surface);">
+            <option value="general">General Shia Ithna Ashari</option>
+            <option value="sistani">Ayt. Sistani (where noted)</option>
+            <option value="khamenei">Ayt. Khamenei (where noted)</option>
+          </select>
+        </div>
+      </div>
+      <div id="rakatay-list"></div>
+    </section>
+
+    <!-- ---------- QIBLA ---------- -->
+    <section class="page" id="page-qibla">
+      <h2 class="section-title">Qibla Compass</h2>
+      <div class="card compass-wrap">
+        <div class="compass-dial" id="compass-dial">
+          <div class="compass-kaaba">🕋</div>
+          <div class="compass-needle" id="compass-needle"></div>
+        </div>
+        <div id="qibla-status" style="margin-top:16px;font-size:0.85rem;text-align:center;color:var(--color-text-secondary);">
+          Tap "Enable Qibla" to detect your direction to the Kaaba.
+        </div>
+        <div id="qibla-degrees" style="font-size:1.4rem;font-weight:700;margin-top:6px;"></div>
+        <div class="btn-row" style="margin-top:14px;">
+          <button class="btn btn--primary" id="qibla-enable-btn">Enable Qibla</button>
+        </div>
+      </div>
+      <div class="card">
+        <p style="font-size:0.8rem;color:var(--color-text-secondary);margin:0 0 8px;"><strong>Calibration:</strong> Move your phone in a figure-8 motion if the compass seems inaccurate. Keep away from magnets and metal objects.</p>
+        <p style="font-size:0.8rem;color:var(--color-text-secondary);margin:0;"><strong>Kaaba coordinates:</strong> 21.4225° N, 39.8262° E (Masjid al-Haram, Makkah).</p>
+      </div>
+    </section>
+
+    <!-- ---------- PRAYER TIME ---------- -->
+    <section class="page" id="page-prayertime">
+      <h2 class="section-title">Prayer Times</h2>
+      <div class="card">
+        <div class="card-row">
+          <button class="btn" id="prayertime-use-gps">📍 Use GPS</button>
+          <input type="text" id="prayertime-city-input" placeholder="Or enter city…" style="flex:1;margin-left:8px;padding:8px;border-radius:8px;border:1px solid var(--color-border);">
+        </div>
+        <div id="prayertime-location-label" style="margin-top:8px;font-size:0.78rem;color:var(--color-text-secondary);">No location set.</div>
+      </div>
+      <div class="card">
+        <div class="card-row">
+          <button class="btn" id="prayertime-prev-day">◀ Prev</button>
+          <div id="prayertime-date-label" style="font-weight:700;"></div>
+          <button class="btn" id="prayertime-next-day">Next ▶</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-row" style="margin-bottom:8px;">
+          <span style="font-size:0.8rem;">Next: <strong id="prayertime-next-name">—</strong></span>
+          <span style="font-size:0.9rem;font-weight:700;" id="prayertime-next-countdown">—:—:—</span>
+        </div>
+        <div id="prayertime-list"></div>
+      </div>
+      <div class="card">
+        <div class="settings-row">
+          <span class="settings-row__label">Calculation Method</span>
+          <select id="prayertime-method" style="padding:6px;border-radius:8px;border:1px solid var(--color-border);background:var(--color-surface);">
+            <option value="jafari">Shia Ithna Ashari (Leva Institute, Qum)</option>
+            <option value="jafari_tehran">Institute of Geophysics, Univ. of Tehran</option>
+          </select>
+        </div>
+        <div class="settings-row">
+          <span class="settings-row__label">Time Format</span>
+          <select id="prayertime-format" style="padding:6px;border-radius:8px;border:1px solid var(--color-border);background:var(--color-surface);">
+            <option value="12">12-hour</option>
+            <option value="24">24-hour</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CALENDAR ---------- -->
+    <section class="page" id="page-calendar">
+      <h2 class="section-title">Islamic Calendar</h2>
+      <div class="card">
+        <div class="card-row">
+          <button class="btn" id="calendar-prev-month">◀</button>
+          <div id="calendar-month-label" style="font-weight:700;"></div>
+          <button class="btn" id="calendar-next-month">▶</button>
+        </div>
+        <p style="font-size:0.7rem;color:var(--color-text-secondary);margin:8px 0 0;">Hijri dates are calculated using the tabular Islamic calendar and may differ ±1 day from local moon sighting or your Marja's announcement.</p>
+      </div>
+      <div class="card">
+        <div class="calendar-grid" id="calendar-dow-row"></div>
+        <div class="calendar-grid" id="calendar-grid" style="margin-top:6px;"></div>
+      </div>
+      <div id="calendar-event-detail"></div>
+    </section>
+
+    <!-- ---------- QAZA ---------- -->
+    <section class="page" id="page-qaza">
+      <h2 class="section-title">Qaza Namaz Tracker</h2>
+      <p style="font-size:0.8rem;color:var(--color-text-secondary);">A private, personal tracker to help you make up missed prayers — not a judgment of anyone's practice. Data stays on this device.</p>
+      <div id="qaza-list"></div>
+      <div class="card">
+        <h3 style="margin:0 0 10px;font-size:0.9rem;">Add Custom Quantity</h3>
+        <div class="card-row">
+          <select id="qaza-prayer-select" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--color-border);">
+            <option value="fajr">Fajr</option>
+            <option value="dhuhr">Dhuhr</option>
+            <option value="asr">Asr</option>
+            <option value="maghrib">Maghrib</option>
+            <option value="isha">Isha</option>
+          </select>
+          <input type="number" id="qaza-add-qty" value="1" min="1" style="width:70px;padding:8px;border-radius:8px;border:1px solid var(--color-border);">
+          <button class="btn btn--primary" id="qaza-add-btn">Add</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-row">
+          <span style="font-size:0.85rem;">Total remaining</span>
+          <strong id="qaza-total-remaining">0</strong>
+        </div>
+        <div class="btn-row" style="margin-top:10px;">
+          <button class="btn btn--danger" id="qaza-reset-all">Reset All (confirm required)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- QURAN ---------- -->
+    <section class="page" id="page-quran">
+      <h2 class="section-title">Holy Quran</h2>
+      <div class="card">
+        <div class="card-row">
+          <input type="text" id="quran-surah-search" placeholder="Search Surah name or number…" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--color-border);">
+        </div>
+      </div>
+      <div id="quran-surah-list"></div>
+    </section>
+
+    <!-- ---------- ZIYARAT ---------- -->
+    <section class="page" id="page-ziyarat">
+      <h2 class="section-title">Ziyarat Library</h2>
+      <div id="ziyarat-groups"></div>
+    </section>
+
+    <!-- ---------- AAMAAL ---------- -->
+    <section class="page" id="page-aamaal">
+      <h2 class="section-title">Aamaal</h2>
+      <div id="aamaal-groups"></div>
+    </section>
+
+    <!-- ---------- MUNAAJAAT ---------- -->
+    <section class="page" id="page-munaajaat">
+      <h2 class="section-title">Munaajaat</h2>
+      <div id="munaajaat-list"></div>
+    </section>
+
+    <!-- ---------- SAHIFA ---------- -->
+    <section class="page" id="page-sahifa">
+      <h2 class="section-title">Sahifa Collections</h2>
+      <div id="sahifa-groups"></div>
+    </section>
+
+    <!-- ---------- DUAS ---------- -->
+    <section class="page" id="page-duas">
+      <h2 class="section-title">Duas</h2>
+      <div id="duas-groups"></div>
+    </section>
+
+    <!-- ---------- BAQIYAAT ---------- -->
+    <section class="page" id="page-baqiyaat">
+      <h2 class="section-title">Baqiyaat us-Saalehaat</h2>
+      <div id="baqiyaat-list"></div>
+    </section>
+
+    <!-- ---------- READER (generic immersive reader) ---------- -->
+    <section class="page" id="page-reader">
+      <button class="btn" id="reader-back-btn" style="margin-bottom:10px;">← Back</button>
+      <div class="reader">
+        <h2 id="reader-title" style="margin:0 0 4px;"></h2>
+        <div id="reader-meta" class="reader__meta"></div>
+        <div class="reader-toolbar">
+          <button class="btn" data-reader-mode="both">Arabic + Urdu</button>
+          <button class="btn" data-reader-mode="arabic-only">Arabic Only</button>
+          <button class="btn" data-reader-mode="urdu-only">Urdu Only</button>
+          <button class="btn" id="reader-font-smaller">A-</button>
+          <button class="btn" id="reader-font-larger">A+</button>
+          <button class="btn" id="reader-bookmark-btn">☆ Bookmark</button>
+          <button class="btn" id="reader-copy-btn">⧉ Copy</button>
+          <button class="btn" id="reader-share-btn">⇧ Share</button>
+        </div>
+        <div id="reader-content"></div>
+      </div>
+    </section>
+
+    <!-- ---------- DEVELOPER ---------- -->
+    <section class="page" id="page-developer">
+      <h2 class="section-title">Developer</h2>
+      <div class="card developer-card">
+        <div class="developer-photo" id="developer-photo">🕋</div>
+        <h3 style="margin:4px 0 2px;">Mohd Jaun Rizvi</h3>
+        <p style="margin:0 0 10px;color:var(--color-text-secondary);font-size:0.85rem;">Founder &amp; Developer of ShiaSphere</p>
+        <p style="font-size:0.85rem;line-height:1.6;">Built with the intention of making authentic Shia Islamic worship resources — prayers, Quran, Duas, Ziyarat and Aamaal — accessible, accurate, and beautifully presented for the Shia community worldwide.</p>
+        <div class="chip" style="margin-top:10px;">App Version 1.0.0 (Phase 1)</div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px;font-size:0.9rem;">Credits &amp; Sources</h3>
+        <p style="font-size:0.78rem;color:var(--color-text-secondary);line-height:1.6;">
+          Quran Arabic text: standard Uthmani script. Namaz recitations and short Surahs include Urdu translation in the tradition of classical public-domain renderings (e.g. Fateh Muhammad Jalandhry style). Duas, Ziyarat and Aamaal texts are being added progressively from Mafatih al-Jinan, Sahifa Sajjadiyya and other verified Shia sources — entries not yet verified are clearly marked "Verified text pending" rather than filled with placeholder content.
+        </p>
+      </div>
+    </section>
+
+    <!-- ---------- SETTINGS ---------- -->
+    <section class="page" id="page-settings">
+      <h2 class="section-title">Settings</h2>
+
+      <div class="card">
+        <h3 style="margin:0 0 10px;font-size:0.9rem;">Theme</h3>
+        <div class="theme-swatch-row">
+          <div class="theme-swatch theme-swatch--golden" data-theme-choice="golden">Golden</div>
+          <div class="theme-swatch theme-swatch--silver" data-theme-choice="silver">Silver</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px;font-size:0.9rem;">Text Display</h3>
+        <div class="settings-row">
+          <span class="settings-row__label">Display Mode</span>
+          <select id="settings-display-mode" style="padding:6px;border-radius:8px;border:1px solid var(--color-border);">
+            <option value="both">Arabic + Urdu</option>
+            <option value="arabic-only">Arabic Only</option>
+            <option value="urdu-only">Urdu Only</option>
+          </select>
+        </div>
+        <div class="settings-row">
+          <span class="settings-row__label">Transliteration</span>
+          <label class="switch"><input type="checkbox" id="settings-translit-toggle"><span class="switch-slider"></span></label>
+        </div>
+        <div class="settings-row">
+          <span class="settings-row__label">Text Size</span>
+          <select id="settings-font-size" style="padding:6px;border-radius:8px;border:1px solid var(--color-border);">
+            <option value="small">Small</option>
+            <option value="medium" selected>Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">Extra Large</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px;font-size:0.9rem;">Location &amp; Prayer</h3>
+        <div class="settings-row">
+          <span class="settings-row__label">Time Format</span>
+          <select id="settings-time-format" style="padding:6px;border-radius:8px;border:1px solid var(--color-border);">
+            <option value="12">12-hour</option>
+            <option value="24">24-hour</option>
+          </select>
+        </div>
+        <div class="settings-row">
+          <span class="settings-row__label">Notifications</span>
+          <label class="switch"><input type="checkbox" id="settings-notif-toggle"><span class="switch-slider"></span></label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px;font-size:0.9rem;">Privacy &amp; Data</h3>
+        <p style="font-size:0.78rem;color:var(--color-text-secondary);">All your Tasbeeh counts, Qaza tracker, bookmarks and settings are stored locally on this device only.</p>
+        <button class="btn btn--danger" id="settings-clear-data">Clear All Saved Data</button>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px;font-size:0.9rem;">About</h3>
+        <p style="font-size:0.78rem;color:var(--color-text-secondary);">ShiaSphere v1.0.0 — Developed by Mohd Jaun Rizvi.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== BOTTOM NAVIGATION ===================== -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <button class="nav-item is-active" data-nav="home"><span class="nav-item__icon">🏠</span>Home</button>
+    <button class="nav-item" data-nav="tasbeeh"><span class="nav-item__icon">📿</span>Tasbeeh</button>
+    <button class="nav-item" data-nav="rakatay"><span class="nav-item__icon">🕌</span>Rakatay</button>
+    <button class="nav-item" data-nav="qibla"><span class="nav-item__icon">🧭</span>Qibla</button>
+    <button class="nav-item" data-nav="prayertime"><span class="nav-item__icon">⏰</span>Prayer</button>
+    <button class="nav-item" data-nav="calendar"><span class="nav-item__icon">📅</span>Calendar</button>
+    <button class="nav-item" data-nav="qaza"><span class="nav-item__icon">✅</span>Qaza</button>
+    <button class="nav-item" data-nav="developer"><span class="nav-item__icon">👤</span>Developer</button>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="js/hijri.js"></script>
+<script src="js/content-loader.js"></script>
+<script src="js/bookmarks.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/tasbeeh.js"></script>
+<script src="js/qaza.js"></script>
+<script src="js/qibla.js"></script>
+<script src="js/prayer-times.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/search.js"></script>
+<script src="js/reader.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

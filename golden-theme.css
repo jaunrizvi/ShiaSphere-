@@ -1,0 +1,33 @@
+/* Golden Theme - warm cream / antique gold / dark brown / teal accent */
+:root[data-theme="golden"] {
+  --color-bg: #FBF3DD;
+  --color-surface: #FFFDF6;
+  --color-header-bg: #3B2416;
+  --color-header-text: #F6E6BF;
+  --color-border: #C9A227;
+  --color-accent: #1C7C77;
+  --color-text-primary: #2B1B0E;
+  --color-text-secondary: #76623F;
+  --color-ornament: #C9A227;
+  --color-nav-bg: #FFFDF6;
+  --color-nav-active: #1C7C77;
+  --color-nav-inactive: #9C8859;
+  --color-card-shadow: rgba(80, 55, 10, 0.14);
+}
+
+:root[data-theme="golden"] .ornament-divider {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-ornament) 0 10px,
+    transparent 10px 20px
+  );
+}
+
+:root[data-theme="golden"] .app-header {
+  background: linear-gradient(180deg, #3B2416, #2E1B10);
+}
+
+:root[data-theme="golden"] .tasbeeh-tap-zone,
+:root[data-theme="golden"] .compass-dial {
+  background: radial-gradient(circle, #FFFDF6, #F3E3B6);
+}

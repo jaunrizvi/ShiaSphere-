@@ -1,0 +1,37 @@
+/* Arabic / Urdu RTL + font loading support.
+   Fonts are loaded from Google Fonts in index.html <head> with
+   font-display: swap and local system fallbacks defined here. */
+
+@font-face {
+  font-family: 'Noto Naskh Arabic Fallback';
+  src: local('Traditional Arabic'), local('Arial');
+  unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+[dir="rtl"], .rtl {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: embed;
+}
+
+.arabic-text {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: plaintext;
+  line-height: 2.4;
+  word-spacing: 1px;
+}
+
+.urdu-text {
+  font-family: var(--font-urdu);
+  direction: rtl;
+  unicode-bidi: plaintext;
+  line-height: 2.1;
+}
+
+/* Ensure numerals inside Arabic/Urdu blocks stay LTR so ayah numbers,
+   percentages, etc. don't get reversed. */
+.arabic-text bdi, .urdu-text bdi {
+  unicode-bidi: isolate;
+  direction: ltr;
+}

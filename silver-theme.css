@@ -1,0 +1,33 @@
+/* Silver Theme - pearl white / cool gray / charcoal header / silver ornament */
+:root[data-theme="silver"] {
+  --color-bg: #F1F2F4;
+  --color-surface: #FFFFFF;
+  --color-header-bg: #23262B;
+  --color-header-text: #EDEFF2;
+  --color-border: #B9BEC6;
+  --color-accent: #3A6EA5;
+  --color-text-primary: #202326;
+  --color-text-secondary: #6A6F77;
+  --color-ornament: #B9BEC6;
+  --color-nav-bg: #FFFFFF;
+  --color-nav-active: #3A6EA5;
+  --color-nav-inactive: #9AA0A8;
+  --color-card-shadow: rgba(30, 32, 36, 0.1);
+}
+
+:root[data-theme="silver"] .ornament-divider {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-ornament) 0 10px,
+    transparent 10px 20px
+  );
+}
+
+:root[data-theme="silver"] .app-header {
+  background: linear-gradient(180deg, #23262B, #1A1C20);
+}
+
+:root[data-theme="silver"] .tasbeeh-tap-zone,
+:root[data-theme="silver"] .compass-dial {
+  background: radial-gradient(circle, #FFFFFF, #E2E4E7);
+}

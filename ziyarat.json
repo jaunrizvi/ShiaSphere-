@@ -1,0 +1,70 @@
+{
+  "groups": [
+    {
+      "id": "imam-hussain",
+      "title": "Ziyarat of Imam Hussain (a.s.)",
+      "items": [
+        { "id": "ziyarat-ashura", "title": "Ziyarat Ashura", "status": "pending" },
+        { "id": "ziyarat-arbaeen", "title": "Ziyarat Arbaeen", "status": "pending" },
+        { "id": "ziyarat-waritha", "title": "Ziyarat Waritha", "status": "pending" },
+        { "id": "ziyarat-nahiya", "title": "Ziyarat Nahiya Muqaddasa", "status": "pending" }
+      ]
+    },
+    {
+      "id": "imam-ali",
+      "title": "Ziyarat of Amir al-Mumineen Imam Ali (a.s.)",
+      "items": [
+        { "id": "ziyarat-aminullah", "title": "Ziyarat Aminullah", "status": "pending" }
+      ]
+    },
+    {
+      "id": "masumeen",
+      "title": "Ziyarat of the 14 Masumeen (a.s.)",
+      "items": [
+        { "id": "ziyarat-prophet", "title": "Prophet Muhammad (s.a.w.)", "status": "pending" },
+        { "id": "ziyarat-fatima", "title": "Bibi Fatima Zahra (s.a.)", "status": "pending" },
+        { "id": "ziyarat-ali", "title": "Imam Ali (a.s.)", "status": "pending" },
+        { "id": "ziyarat-hasan", "title": "Imam Hasan (a.s.)", "status": "pending" },
+        { "id": "ziyarat-hussain", "title": "Imam Hussain (a.s.)", "status": "pending" },
+        { "id": "ziyarat-zainulabideen", "title": "Imam Zain-ul-Abideen (a.s.)", "status": "pending" },
+        { "id": "ziyarat-baqir", "title": "Imam Muhammad Baqir (a.s.)", "status": "pending" },
+        { "id": "ziyarat-sadiq", "title": "Imam Jafar Sadiq (a.s.)", "status": "pending" },
+        { "id": "ziyarat-kazim", "title": "Imam Musa Kazim (a.s.)", "status": "pending" },
+        { "id": "ziyarat-ridha", "title": "Imam Ali Ridha (a.s.)", "status": "pending" },
+        { "id": "ziyarat-taqi", "title": "Imam Muhammad Taqi (a.s.)", "status": "pending" },
+        { "id": "ziyarat-naqi", "title": "Imam Ali Naqi (a.s.)", "status": "pending" },
+        { "id": "ziyarat-askari", "title": "Imam Hasan Askari (a.s.)", "status": "pending" },
+        { "id": "ziyarat-mahdi", "title": "Imam Mahdi (a.j.)", "status": "pending" }
+      ]
+    },
+    {
+      "id": "holy-shrines",
+      "title": "Holy Shrines and Places",
+      "items": [
+        { "id": "najaf", "title": "Najaf", "status": "pending" },
+        { "id": "karbala", "title": "Karbala", "status": "pending" },
+        { "id": "kadhimayn", "title": "Kadhimayn", "status": "pending" },
+        { "id": "samarra", "title": "Samarra", "status": "pending" },
+        { "id": "mashhad", "title": "Mashhad", "status": "pending" },
+        { "id": "qom", "title": "Qom", "status": "pending" },
+        { "id": "medina", "title": "Medina", "status": "pending" },
+        { "id": "mecca", "title": "Mecca", "status": "pending" }
+      ]
+    },
+    {
+      "id": "holy-places-mafatih",
+      "title": "Ziyarat of Holy Places (Hijaz, Iran, Iraq — from Mafatih al-Jinan)",
+      "items": [
+        { "id": "holy-places-mafatih-collection", "title": "Full collection", "status": "pending" }
+      ]
+    },
+    {
+      "id": "journey-to-paradise",
+      "title": "Journey to Paradise (Hijaz, Iran, Iraq, Syria — from other sources)",
+      "items": [
+        { "id": "journey-to-paradise-collection", "title": "Full collection", "status": "pending" }
+      ]
+    }
+  ],
+  "note": "ShiaSphere does not display invented Ziyarat text. Each entry above will be populated with complete, verified Arabic and Urdu translation, with source and edition cited, as material is added. Until then it is marked 'Verified text pending.'"
+}

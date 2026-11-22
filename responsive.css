@@ -1,0 +1,33 @@
+/* Responsive adjustments */
+
+@media (max-width: 360px) {
+  .app-header__title { font-size: 1rem; }
+  .tasbeeh-count { font-size: 3.4rem; }
+  .quick-grid { grid-template-columns: repeat(3, 1fr); }
+  .nav-item { font-size: 0.56rem; }
+}
+
+@media (min-width: 560px) {
+  .app-main { padding-left: 20px; padding-right: 20px; }
+}
+
+@media (min-width: 900px) {
+  .app-main { max-width: 680px; }
+}
+
+/* Prevent nav overlap on very small screens / landscape */
+@media (max-height: 480px) and (orientation: landscape) {
+  :root { --nav-height: 54px; }
+  .nav-item { font-size: 0.5rem; }
+  .nav-item__icon { font-size: 0.95rem; }
+}
+
+/* Respect safe-area insets on notched Android/iOS devices */
+.bottom-nav {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  height: calc(var(--nav-height) + env(safe-area-inset-bottom, 0));
+}
+
+.app-header {
+  padding-top: calc(10px + env(safe-area-inset-top, 0));
+}
